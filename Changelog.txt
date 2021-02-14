@@ -1,0 +1,15 @@
+Changelog
+    1. v.2.0 beta 2021/01/30
+        1.1. SQL script to create a date dimension table:
+            a) Added the new staging table to perform ETL procedures
+            b) Added 8 new columns
+            c) Added [RowId] column as a Surrogate Key
+        1.2. ETL_Tools.py script:
+            a) Deploying data from the source CSV file to the new staging table to perform ETL procedures
+            b) Added a simple ETL procedure
+            c) Transferring data from the staging table to the main table
+    2. v.1.0 beta 2021/01/20
+        2.1. SQL script to create a simple Database
+        2.2. SQL script to create a date dimension table
+        2.3. Database_Tools.py script to create empty the DATE_DIM table with error handling
+        2.4. ETL_Tools.py script to deploy data from the source CSV file right to the DATE_DIM table with error handling

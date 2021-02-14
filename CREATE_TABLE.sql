@@ -1,0 +1,30 @@
+USE DDDB;
+DROP TABLE IF EXISTS DATE_DIM;
+DROP TABLE IF EXISTS DATE_DIM_STAGING;
+CREATE TABLE DATE_DIM_STAGING (
+   [RowId] int IDENTITY(1,1),
+   [DateNum] INT NOT NULL PRIMARY KEY,
+   [Date] DATE NOT NULL,
+   [YearMonthNum] INT NOT NULL,
+   [Calendar_Quarter] VARCHAR(8) NOT NULL,
+   [MonthNum] TINYINT NOT NULL,
+   [MonthName] VARCHAR(10) NOT NULL,
+   [MonthShortName] CHAR(3) NOT NULL,
+   [WeekNum] TINYINT NOT NULL,
+   [DayNumOfYear] SMALLINT NOT NULL,
+   [DayNumOfMonth] TINYINT NOT NULL,
+   [DayNumOfWeek] TINYINT NOT NULL,
+   [DayName] VARCHAR(10) NOT NULL,
+   [DayShortName] CHAR(3) NOT NULL,
+   [Quarter] TINYINT NOT NULL,
+   [YearQuarterNum] INT NOT NULL,
+   [DayNumOfQuarter] TINYINT NOT NULL,
+   [FirstDayOfMonth] DATE,
+	[LastDayOfMonth] DATE,
+	[FirstDayOfQuarter] DATE,
+	[LastDayOfQuarter] DATE,
+	[FirstDayOfYear] DATE,
+	[LastDayOfYear] DATE,
+	[IsHoliday] BIT,
+	[IsWeekday] BIT,
+)
